@@ -39,9 +39,9 @@
   },
   "install" : {
    "path" : {
-     "css": "assets/css/vendor/",
-     "js": "assets/js/vendor/",
-     "less": "assets/less/vendor/",
+     "css": "assets/css/vendor",
+     "js": "assets/js/vendor",
+     "less": "assets/less/vendor",
      "eot": "assets/others/fonts",
      "svg": "assets/others/fonts",
      "ttf": "assets/others/fonts",
