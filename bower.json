@@ -34,6 +34,7 @@
     "iCheck": "git://github.com/fronteed/iCheck.git#~1.0.2",
     "jquery-dropkick2": "git://github.com/changalberto/DropKick#~1.0.0",
     "jquery-migrate": "git://github.com/jquery/jquery-migrate.git#~1.2.1",
+    "lesshat": "3.0.2",
     "gsap": "git://github.com/greensock/GreenSock-JS.git#~1.16.1"
   },
   "install" : {
@@ -49,14 +50,14 @@
      "woff2": "assets/others/fonts"
    },
 
-   "sources": {
+   "bower_components": {
      "bootstrap": [
-        "sources/bootstrap/less/*",
-        "sources/bootstrap/dist/js/bootstrap.js"
+        "bower_components/bootstrap/less/*",
+        "bower_components/bootstrap/dist/js/bootstrap.js"
       ],
      
       "modernizr": [
-        "sources/modernizr-min/modernizr.min.js"
+        "bower_components/modernizr-min/modernizr.min.js"
       ]
    }
 
