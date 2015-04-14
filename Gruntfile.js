@@ -17,15 +17,7 @@ module.exports = function(grunt){
         files_css: {
             all:[
                 //'bower_components/teste.css',
-                'assets/css/style.css'
-            ]
-        },
-
-        files_less: {
-            all:[
-                //'bower_components/teste.css',
-                'bower_components/bootstrap/less/bootstrap.less',
-                'assets/less/index.less'
+                'assets/css/index.css'
             ]
         },
 
@@ -55,17 +47,7 @@ module.exports = function(grunt){
             }
         },
 
-        concat: {
-            options: {
-              separator: ';',
-            },
-            dist: {
-              src: ['<%= themes_css.all %>'],
-              dest: 'assets/css/index.css',
-            },
-        },
-
-        less: {
+         less: {
           dev: {
             options: {
               paths: ["assets/css"],
@@ -73,9 +55,7 @@ module.exports = function(grunt){
               cleancss: true
             },
             files: {
-              "assets/css/style.css": [
-                  '<%= files_less.all %>'
-                ]
+              "assets/css/index.css": "assets/less/index.less"
             }
           },
 
@@ -98,22 +78,8 @@ module.exports = function(grunt){
             },
             target: {
                 files: {
-                  'assets/css/index.css': [
+                  'assets/css/index-min.css': [
                      '<%= files_css.all %>'
-                ]
-              }
-            }
-        },
-
-        cssmin: {
-            options: {
-                shorthandCompacting: false,
-                roundingPrecision: -1,
-            },
-            target: {
-                files: {
-                  'assets/css/index.css': [
-                     'assets/css/index.css'
                 ]
               }
             }
@@ -158,6 +124,6 @@ module.exports = function(grunt){
         },
     });
 
-    grunt.registerTask('default',   ['less:dev' ,'uglify:dev' , 'concat', 'cssmin', 'notify']);
-    grunt.registerTask('prod',      ['less:prod','uglify:prod', 'concat', 'cssmin', 'notify']);
+    grunt.registerTask('default',   ['less:dev','uglify:dev',   'cssmin', 'notify']);
+    grunt.registerTask('prod',      ['less:prod','uglify:prod', 'cssmin', 'notify']);
 }
